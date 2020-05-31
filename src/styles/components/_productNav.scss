@@ -1,0 +1,42 @@
+.productNav {
+    background-color: #fff;
+    border-bottom: solid 1px $--color-gray;
+    width: 100%;
+    z-index: 10;
+    transition: all .5s ease-out;
+    &__nav{
+        width: 100%;
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+
+        &--item {
+            border-right: solid 1px $--color-gray;
+            padding: 16px 32px;
+            text-transform: uppercase;
+            
+            &--link {
+                color: $--color-dark-gray;
+                &:hover {
+                    color: $--color-blue;
+                }
+            }
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .productNav {
+        display: none;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .productNav {
+        display: none;
+    }
+}

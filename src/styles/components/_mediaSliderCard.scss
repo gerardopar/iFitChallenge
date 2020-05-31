@@ -1,0 +1,67 @@
+.mediaSliderCard {
+    @include applyFlex(center,center,column);
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: $--box-shadow;
+    flex: 1;
+    margin: 12px;
+    max-width: 450px;
+    min-width: 455px;
+    padding: 32px 12px;
+    text-align: center;
+    &__img{
+        height: auto;
+        margin-bottom: 20px;
+        max-width: 112px;
+        width: 100%;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 320.98px) {
+    .mediaSliderCard {
+        min-width: 300px;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 375.98px) and (min-width: 321px) {
+    .mediaSliderCard {
+        min-width: 350px;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 415.98px) and (min-width: 376px) {
+    .mediaSliderCard {
+        min-width: 380px;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) and (min-width: 416px) {
+    .mediaSliderCard {
+        min-width: 260px;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .mediaSliderCard {
+        min-width: 460px;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .mediaSliderCard {
+        min-width: 360px;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .mediaSliderCard {
+        min-width: 310px;
+    }
+}

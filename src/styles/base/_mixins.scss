@@ -1,0 +1,7 @@
+// mixin for using flex-box
+@mixin applyFlex($align, $justify, $direction: row) {
+    align-items: $align;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+}

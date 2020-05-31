@@ -1,0 +1,131 @@
+.desktopLib {
+    @include applyFlex(center, center);
+    width: 100%;
+
+    &__container {
+        @include applyFlex(center, space-between);
+        flex-wrap: wrap;
+        padding: 32px 12px;
+        width: 95%;
+    }
+
+    &__col {
+        @include applyFlex(flex-start, center, column);
+        border-radius: 4px;
+        box-shadow: $--box-shadow;
+        margin-bottom: 30px;
+        transition: all .5s ease-out;
+        width: 24%;
+        &:hover{
+            cursor: pointer;
+            box-shadow: $--box-shadow-strong;
+        }
+
+        &:hover > .desktopLib__btn {
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+
+    &__img {
+        overflow-y: hidden;
+        position: relative;
+        width: 100%;
+
+        &--src {
+            height: auto;
+            width: 100%;
+        }
+
+        &:hover > &--overlay {
+            right: 0;
+        }
+
+        &--overlay {
+            @include applyFlex(center ,center, column);
+            background-color: rgba(0, 0, 0, 0.568);
+            height: 97.5%;
+            position: absolute;
+            right: -300px;
+            top: 0;
+            transition: all .5s ease-out;
+            width: 40%;
+
+            &--num,
+            &--icon {
+                color: #fff;
+                font-size: 2rem;
+                font-weight: 600;
+            }
+            &--text {
+                color: #fff;
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__content {
+        @include applyFlex(center, space-between);
+        padding: 12px 16px;
+        padding-bottom: 0;
+        text-align: left;
+        width: 100%;
+        &--text {
+            font-weight: 600;
+            width: 80%;
+        }
+
+        &--avatar {
+            border-radius: 10px;
+            height: auto;
+            width: 40px;
+        }
+    }
+
+    &__stats {
+        @include applyFlex(center, flex-start);
+        padding: 12px 16px;
+        width: 100%;
+
+        &--icon {
+            font-size: .85rem;
+        }
+    }
+
+    &__btn--wrap{
+        @include applyFlex(center, flex-start);
+        padding: 12px 0px;
+        width: 100%;
+    }
+    &__btn {
+        background: none;
+        border: none;
+        color: $--color-blue;
+        font-size: .85rem;
+        font-weight: 600;
+        opacity: 0;
+        outline: none;
+        padding: 32px 18px;
+        text-transform: uppercase;
+        transition: all 1s ease;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px)  {
+    .desktopLib {
+        &__col {
+            width: 100%;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .desktopLib {
+        &__col {
+            width: 48%;
+        }
+    }
+}

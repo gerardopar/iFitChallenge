@@ -1,0 +1,113 @@
+.mobileNav {
+    @include applyFlex(flex-start, flex-start, column);
+    background-color: #fff;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 0;
+    transition: all .4s ease-out;
+    z-index: 100;
+    &__active {
+        transition: all 1s ease-out;
+        width: 40%;
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+        -ms-transition: all 1s ease-out;
+        -o-transition: all 1s ease-out;
+}
+
+    &__header {
+        @include applyFlex(center, flex-end);
+        padding: 12px 16px;
+        width: 100%;
+    }
+    &__btn--open{
+        background: none;
+        border: none;
+        color: $--color-dark-gray;
+        cursor: pointer;
+        display: none;
+        left: 5%;
+        outline: none;
+        position: absolute;
+    }
+    &__btn--close {
+        background: none;
+        border: none;
+        color: $--color-dark-gray;
+        cursor: pointer;
+        outline: none;
+    }
+
+    &__nav {
+        @include applyFlex(center, center, column);
+        width: 100%;
+        &--list {
+            width: 90%;
+        }
+    }
+    &__list {
+        &--item {
+            border-bottom: solid 1px $--color-gray;
+            list-style: none;
+            padding: 12px 16px;
+            width: 100%;
+            &--link {
+                color: black;
+                font-size: .85rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                width: 100%;
+                &:hover {
+                    color: $--color-blue;
+                }
+            }
+        }
+    }
+
+    &__btn--wrap {
+        @include applyFlex(center, center);
+        width: 100%;
+    }
+    &__btn {
+        background-color: $--color-blue;
+        border: none;
+        border-radius: 4px;
+        box-shadow: $--box-shadow;
+        color: #fff;
+        margin-top: 4px;
+        outline: none;
+        padding: 12px 16px;
+        text-transform: uppercase;
+        width: 90%;
+
+        &:hover {
+            background-color: $--color-dark-blue;
+            cursor: pointer;
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .mobileNav {
+        &__btn--open {
+            display: block;
+        }
+        &__active {
+            transition: all .4s ease-out;
+            width: 60%;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .mobileNav {
+        &__btn--open {
+            display: block;
+        }
+    }
+}

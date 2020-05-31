@@ -1,0 +1,83 @@
+.hero {
+    @include applyFlex(center, center);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    &__container {
+        @include applyFlex(center, center, column);
+        text-align: center;
+        width: 100%;
+    }
+
+    &__title {
+        animation:  animate 2s linear;
+        color: #fff;
+        font-size: 4rem;
+        font-weight: 600;
+        margin-bottom: 50px;
+    }
+
+    &__btn {
+        background-color: $--color-blue;
+        border: none;
+        border-radius: 4px;
+        box-shadow: $--box-shadow;
+        color: #fff;
+        cursor: pointer;
+        font-weight: 600;
+        max-width: 320px;
+        outline: none;
+        padding: 12px 24px;
+        text-transform: uppercase;
+        width: 320px;
+        
+        &:hover {
+            background-color: $--color-dark-blue;
+        }
+    }
+}
+
+// opacity animation
+@keyframes animate {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px)  {
+    .hero {
+        &__container {
+            margin-top: 50px;
+        }
+        &__title {
+            font-size: 2.2rem;
+            padding: 5px;
+        }
+        &__btn {
+            width: 275px;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero {
+        &__container {
+            margin-top: 50px;
+        }
+        &__title {
+            font-size: 2.6rem;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero {
+        &__title {
+            font-size: 3rem;
+        }
+    }
+}

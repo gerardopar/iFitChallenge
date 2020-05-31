@@ -1,0 +1,15 @@
+@import './base/variables';
+@import './base/settings';
+@import './base/mixins';
+// importing components
+@import './components/navigation';
+@import './components/productNav';
+@import './components/mainNav';
+@import './components/mobileNav';
+@import './components/hero';
+@import './components/mediaSlider';
+@import './components/mediaSliderCard';
+@import './components/desktopLibrary';
+@import './components/sectionTitle';
+@import './components/equipment';
+@import './components/footer';

@@ -1,0 +1,110 @@
+.mainNav {
+    @include applyFlex(center,center);
+    background-color: #fff;
+    border-bottom: solid 1px $--color-gray;
+    width: 100%;
+    z-index: 10;
+        &__container{
+        @include applyFlex(center, space-between);
+        width: 90%;
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+
+        &--item {
+            padding: 24px 32px;
+            text-transform: uppercase;
+            
+            &--link {
+                color: $--color-dark-gray;
+                &:hover {
+                    color: $--color-blue;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        height: auto;
+        max-width: 176px;
+        width: 100%;
+    }
+
+    &__btn {
+        background-color: $--color-blue;
+        border: none;
+        border-radius: 4px;
+        box-shadow: $--box-shadow;
+        color: #fff;
+        cursor: pointer;
+        font-size: .85rem;
+        font-weight: 600;
+        outline: none;
+        padding: 12px 24px;
+        text-transform: uppercase;
+        
+
+        &:hover {
+            background-color: $--color-dark-blue;
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .mainNav {
+        padding: 24px 32px;
+
+        &__container {
+            @include applyFlex(center, center);
+        }
+
+        &__nav {
+            display: none;
+        }
+        
+        &__btn {
+            display: none;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .mainNav {
+        padding: 24px 32px;
+
+        &__container {
+            @include applyFlex(center, center);
+        }
+
+        &__nav {
+            display: none;
+        }
+        
+        &__btn {
+            display: none;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .mainNav {
+        padding: 24px 32px;
+
+        &__container {
+            @include applyFlex(center, center);
+        }
+
+        &__nav {
+            display: none;
+        }
+
+        &__btn {
+            display: none;
+        }
+    }
+}
