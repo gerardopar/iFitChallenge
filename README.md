@@ -4,7 +4,7 @@
 ### TECH
   - React.js
   - SCSS
-  - Webpack4
+  - Webpack
   - ESLint
 
 # Desktop View
