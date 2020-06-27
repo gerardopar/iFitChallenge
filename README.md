@@ -1,11 +1,10 @@
 # iFit Challenge
 [View Project](http://ifit-challenge.s3-website-us-east-1.amazonaws.com/)
 
-### TECH
+### Stack
   - React.js
   - SCSS
   - Webpack
-  - ESLint
 
 # Desktop View
 ![landing](docs/iFit.gif)
